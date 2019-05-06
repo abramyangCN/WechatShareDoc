@@ -1,7 +1,5 @@
-# WechatShareDoc
-https://blog.abramyang.com/WechatShareDoc
-
 # WechatShare
+https://blog.abramyang.com/WechatShareDoc
 
 ## Requirement
 
@@ -33,7 +31,7 @@ https://blog.abramyang.com/WechatShareDoc
 
 ---
 
-###Get `ACCESS_TOKEN`
+### Get `ACCESS_TOKEN`
 
 > https method: GET
 > https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
@@ -63,7 +61,7 @@ The server should recieve the data:
 }
 ```
 
-###Signature algorithm
+### Signature algorithm
 
 The rules of generate signature is as follow: the fields of involved signature included noncestr(random string), valid jsapi_ticket, timestamp(time stamp), url (current web page URL, not including # and the remaining ). After all the parameters are signed, sort ASCII code according to the field name from small to large (dictionary order). Use the format of URL key-value pairs (key1 = value1&key2=value2 ...) connect into string1. It should be noted here that all parameter names are lowercase characters. String1 as sha1 encryption, field names and field values are the original value, without URL transfer.
 
@@ -96,7 +94,7 @@ Note the following points:
 4. For security reasons, developers must implement the logic of signature on the server.
 5. If invalid signature or other errors occurred, see appendix 5 for Common errors and solutions
 
-##Frontend
+## Frontend
 
 ---
 
